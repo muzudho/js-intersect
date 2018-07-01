@@ -1,0 +1,20 @@
+body {
+	position: absolute; /* body要素は 10pxぐらい上側に隙間がある。 絶対位置で上に詰める。 */
+	height:2000px;
+}
+
+img.tile {
+	position: absolute;
+    /* left, top, width, height to java script. */
+}
+
+div.deck0 {
+	position: absolute;
+    /* left, top, width, height to java script. */
+	border: solid 5px #3C77B9;
+}
+div.deck1 {
+	position: absolute;
+    /* left, top, width, height to java script. */
+	border: solid 5px #20762F;
+}
