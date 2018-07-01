@@ -1,6 +1,6 @@
 /**
- * Chicken foot.
- * @module js/chicken-foot
+ * Page.
+ * @module js/index
  */
 /*jslint es6 */
 
@@ -32,14 +32,7 @@ function shuffle(a) {
 
 function onLoad() {
 
-    // Decks.
-    for (let iDeck = 0; iDeck < 2; iDeck += 1) {
-        let elmDeck = document.getElementById('deck' + iDeck);
-        elmDeck.style.left = Math.floor(Math.random() * 600) + 'px';
-        elmDeck.style.top = Math.floor(Math.random() * 400) + 'px';
-        elmDeck.style.width = 300 + 'px';
-        elmDeck.style.height = 100 + 'px';
-    }
+    loadDynamicStyle();
 
     // Board. ドロップされる側
     let board = document.getElementById('board');
@@ -60,12 +53,6 @@ function onLoad() {
         if (elmTile !== null) {
             G.angleDeg[idTile] = 0;
             elmTile.draggable = true;
-
-            // 初期位置
-            elmTile.style.left = Math.floor(Math.random() * 600) + 'px';
-            elmTile.style.top = Math.floor(Math.random() * 400) + 'px';
-            elmTile.style.width = 32 + 'px';
-            elmTile.style.height = 64 + 'px';
 
             // https://hakuhin.jp/js/data_transfer.html#DATA_TRANSFER_04
             elmTile.ondragstart = function (event) {

@@ -1,7 +1,7 @@
 /**
  * Intersect on sprite.
  * @authore muzudho
- * @module js/intersect.js
+ * @module js/intersect
  */
 
 /**

@@ -1,7 +1,7 @@
 /**
  * Mouse drag hold on sprite.
  * @authore muzudho
- * @module js/mouse-drag.js
+ * @module js/mouse-drag
  */
 
 /**
@@ -56,6 +56,7 @@ function onDrag(event) {
         event.target.style.top = (event.clientY - rectBodyClient.top - G.mouseDrag.holdPoint.y) + 'px';
         
         // Intersect decks.
+        event.target.style.border = '';
         for (let iDeck = 0; iDeck < 2; iDeck += 1) {
             let elmDeck = document.getElementById('deck' + iDeck);
             
@@ -70,9 +71,7 @@ function onDrag(event) {
             // +------------+
             //
             if (isIntersect(event.target, elmDeck)) {
-                event.target.style.border = "solid 2px blue";
-            } else {
-                event.target.style.border = '';
+                event.target.style.border = "solid 2px " + elmDeck.style.borderColor;
             }
         }
     }

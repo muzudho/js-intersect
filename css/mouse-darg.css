@@ -11,10 +11,10 @@ img.tile {
 div.deck0 {
 	position: absolute;
     /* left, top, width, height to java script. */
-	border: solid 5px #3C77B9;
+	border: solid 5px;
 }
 div.deck1 {
 	position: absolute;
     /* left, top, width, height to java script. */
-	border: solid 5px #20762F;
+	border: solid 5px;
 }
